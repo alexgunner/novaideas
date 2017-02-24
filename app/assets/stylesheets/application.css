@@ -14,3 +14,15 @@
  *= require_self
  *= require font-awesome
  */
+.fa-circle {
+  color: #0D52B1 !important;
+}
+
+.contact-info {
+  color: white;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+}

@@ -13,8 +13,7 @@ Rails.application.config.assets.precompile += %w( agency.css )
 Rails.application.config.assets.precompile += %w( agency.min.css )
 Rails.application.config.assets.precompile += %w( bootstrap.css )
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
-#Rails.application.config.assets.precompile += %w( font-awesome.css )
-#Rails.application.config.assets.precompile += %w( font-awesome.min.css )
+
 
 Rails.application.config.assets.precompile += %w( agency.js )
 Rails.application.config.assets.precompile += %w( agency.min.js )

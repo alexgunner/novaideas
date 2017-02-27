@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  skip_before_filter :verify_authenticity_token  
+  skip_before_filter :verify_authenticity_token
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /contacts
@@ -26,11 +26,13 @@ class ContactsController < ApplicationController
   # POST /contacts.json
   def create
     @contact = Contact.new(contact_params)
+    puts "====================================="
+    puts params[:email]
 
     respond_to do |format|
       if @contact.save
         ContactMailer.contact_email(@contact).deliver_now
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to '/', notice: 'Tu mensaje fue enviado correctamente' }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }

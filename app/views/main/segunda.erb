@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 style="text-align:center"><%= @magazine.name %></h1>
+  <div class="row">
+    <div class="col-lg-6">
+
+      <% if @magazine.id == 1 %>
+        <img src="/assets/portfolio/pro-contruccion1.jpg" class="img-responsive">
+      <% else %>
+        <img src="/assets/portfolio/pro-contruccion2.jpg" class="img-responsive">
+      <% end %>
+
+    </div>
+    <div class="col-lg-6">
+      <p>
+        <%= @magazine.description %>
+      </p>
+      <h3>Descarga la revista</h3>
+      Para descarga la revista, solo haz clic <a href="<%= @magazine.mag.url %>" target="_blank" style="color:#0D52B1">aquí!</a>
+    </div>
+  </div>
+</div>
